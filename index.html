@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmistha Ghosh - CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(145deg, #1e3c72, #2a5298);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .cv-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Header Section */
+        .hero-header {
+            background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .name-display {
+            font-size: 3.2em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #fff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .basic-details-card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 0 auto;
+            max-width: 700px; /* Increased width for better email display */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .basic-title {
+            color: #2c3e50;
+            font-size: 1.6em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .basic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased min-width */
+            gap: 20px;
+        }
+
+        .detail-item {
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            /* Added word-break for long emails */
+            word-break: break-word;
+            hyphens: auto;
+        }
+
+        .detail-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .detail-item:hover::before {
+            left: 100%;
+        }
+
+        .detail-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #ff6b6b;
+        }
+
+        .detail-icon {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .detail-label {
+            font-weight: 500;
+            color: #495057;
+            margin-bottom: 8px; /* Increased spacing */
+            font-size: 0.9em;
+        }
+
+        .detail-value {
+            font-size: 1.15em; /* Slightly larger font */
+            font-weight: 600;
+            color: #2c3e50;
+            line-height: 1.4;
+            /* Ensure full email visibility */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+            font-family: 'Courier New', monospace; /* Monospace for emails */
+        }
+
+        /* Main Content */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 0;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            min-height: 100%;
+        }
+
+        .sidebar-section {
+            margin-bottom: 35px;
+        }
+
+        .sidebar-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .sidebar-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .skill-tag:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            padding: 40px;
+            background: #fafbfc;
+        }
+
+        .main-section {
+            margin-bottom: 40px;
+        }
+
+        .main-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            border-radius: 2px;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .subject-chip {
+            background: white;
+            padding: 12px 18px;
+            border-radius: 30px;
+            font-size: 0.88em;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject-chip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb);
+        }
+
+        .subject-chip:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border-color: #ff6b6b;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #ff6b6b;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .project-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #333, #555);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .github-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .basic-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .name-display {
+                font-size: 2.2em;
+            }
+            
+            .main-content {
+                padding: 25px;
+            }
+            
+            .detail-value {
+                font-size: 1em;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-wrapper {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                border-radius: 0;
+            }
+            .hero-header {
+                background: #2c3e50 !important;
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-wrapper">
+        <!-- Animated Hero Header -->
+        <div class="hero-header">
+            <div class="name-display">Dharmistha Ghosh</div>
+            
+            <!-- Basic Details Card - FIXED EMAIL DISPLAY -->
+            <div class="basic-details-card">
+                <h2 class="basic-title">📋 Basic Details</h2>
+                <div class="basic-grid">
+                    <div class="detail-item">
+                        <span class="detail-icon">📅</span>
+                        <div>
+                            <div class="detail-label">Date of Birth</div>
+                            <div class="detail-value">09/04/2007</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">📱</span>
+                        <div>
+                            <div class="detail-label">Phone</div>
+                            <div class="detail-value">+91 8777754057</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">✉️</span>
+                        <div>
+                            <div class="detail-label">Email</div>
+                            <div class="detail-value">dharmisthaghosh8c16dpsm@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rest of the content remains the same -->
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">🎓 Education</h3>
+                    <p style="font-size: 1em; line-height: 1.6;">
+                        <strong>10th Pass</strong><br>
+                        <strong>Current:</strong> Diploma in Computer Science and Technology
+                    </p>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">🌐 Languages</h3>
+                    <p style="font-size: 1em;">English | Bengali | Hindi</p>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">💻 Technical Skills</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">JAVA</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">MS Office</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">🎯 Core Competencies</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">Embedded Systems</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">Sensors</span>
+                        <span class="skill-tag">Motor Control</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Team Work</span>
+                        <span class="skill-tag">Business Strategy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="main-section">
+                    <h2 class="main-title">📚 Subjects</h2>
+                    <div class="subjects-grid">
+                        <span class="subject-chip">Maths</span>
+                        <span class="subject-chip">Chemistry</span>
+                        <span class="subject-chip">Physics</span>
+                        <span class="subject-chip">English</span>
+                        <span class="subject-chip">HTML/CSS/JS</span>
+                        <span class="subject-chip">Programming in C</span>
+                        <span class="subject-chip">Python</span>
+                        <span class="subject-chip">Data Structures</span>
+                        <span class="subject-chip">Algorithms</span>
+                        <span class="subject-chip">Database Mgmt</span>
+                        <span class="subject-chip">OS</span>
+                        <span class="subject-chip">Software Eng</span>
+                        <span class="subject-chip">Java</span>
+                        <span class="subject-chip">Networking</span>
+                        <span class="subject-chip">Graphics</span>
+                        <span class="subject-chip">Automata</span>
+                        <span class="subject-chip">IoT</span>
+                        <span class="subject-chip">Microprocessor</span>
+                        <span class="subject-chip">Mobile Computing</span>
+                        <span class="subject-chip">Web Design</span>
+                        <span class="subject-chip">Cloud</span>
+                        <span class="subject-chip">Entrepreneurship</span>
+                        <span class="subject-chip">Economics</span>
+                    </div>
+                </div>
+
+                <div class="main-section">
+                    <h2 class="main-title">🚀 Projects</h2>
+                    <div class="project-card">
+                        <div class="project-title">🌐 IoT Home Automation</div>
+                        <p>Smart home automation system using IoT technologies for remote control and monitoring.</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-title">🍕 Food Delivery App - Kurry Chachu</div>
+                        <p>Full-stack food delivery web application with modern UI/UX and responsive design.</p>
+                    </div>
+                </div>
+
+                <div class="main-section">
+                    <h2 class="main-title">🔗 Portfolio</h2>
+                    <a href="https://github.com/dharmistha46" target="_blank" class="github-link">
+                        <span>🌟</span>
+                        github.com/dharmistha46
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
