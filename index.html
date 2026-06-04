@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmistha Ghosh | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Decorative Blobs for Glassmorphism Effect -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">DG<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Theme" class="control-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content animate-fade">
+                <span class="welcome-tag">Welcome to my space</span>
+                <h1>Hi, I'm <span class="highlight">Dharmistha Ghosh</span></h1>
+                <h2><span class="typewriter" id="typewriter-text"></span><span class="cursor">|</span></h2>
+                <p>Passionate coder and technology enthusiast, currently building base skills in computer science theory, systems, and modern web applications.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:dharmisthaghosh23@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper animate-fade delay-1">
+                <div class="profile-card-glass">
+                   <div class="profile-avatar">
+                    <img src="pfp.jpeg" alt="Dharmistha Ghosh" class="profile-pic">
+                    </div>
+                    <div class="status-badge">
+                        <span class="status-dot"></span> Available for internships
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card-glass">
+                    <h3>Who I Am</h3>
+                    <p>I am currently pursuing my Diploma in Computer Science and Technology. I have a strong foundation in computer engineering concepts and love translating logic into clean, functional code. My academic journey fuels my curiosity to learn modern frontend technologies, algorithmic problem-solving, and system architectures.</p>
+                    <p>I aim to build efficient and accessible digital experiences while continuously challenging myself to adopt industry best practices.</p>
+                    <div class="personal-info">
+                        <div class="info-item"><i class="fas fa-map-marker-alt"></i> <span>India</span></div>
+                        <div class="info-item"><i class="fas fa-envelope"></i> <span>dharmisthaghosh23@gmail.com</span></div>
+                        <div class="info-item"><i class="fas fa-graduation-cap"></i> <span>Diploma in CST</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <!-- Frontend Card -->
+                <div class="skill-card-glass">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li><span>HTML5 & CSS3</span> <span class="skill-percentage">90%</span></li>
+                        <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                        <li><span>JavaScript (ES6+)</span> <span class="skill-percentage">75%</span></li>
+                        <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                        <li><span>Responsive Design</span> <span class="skill-percentage">85%</span></li>
+                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                    </ul>
+                </div>
+
+                <!-- Languages & Core CS Card -->
+                <div class="skill-card-glass">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Core CS & Languages</h3>
+                    <ul class="skill-list">
+                        <li><span>C Programming</span> <span class="skill-percentage">80%</span></li>
+                        <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                        <li><span>Data Structures</span> <span class="skill-percentage">70%</span></li>
+                        <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+                        <li><span>Database (SQL)</span> <span class="skill-percentage">75%</span></li>
+                        <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                    </ul>
+                </div>
+
+                <!-- Tools & Platforms Card -->
+                <div class="skill-card-glass">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools & Platforms</h3>
+                    <ul class="skill-list">
+                        <li><span>Git & GitHub</span> <span class="skill-percentage">80%</span></li>
+                        <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                        <li><span>VS Code</span> <span class="skill-percentage">90%</span></li>
+                        <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                        <li><span>Linux Basics</span> <span class="skill-percentage">65%</span></li>
+                        <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content-glass">
+                        <span class="date">2023 - Present</span>
+                        <h3>Diploma in Computer Science & Technology</h3>
+                        <p class="institution">State Council of Technical Education</p>
+                        <p>Currently focusing on core subjects including Data Structures, Computer Organization, Database Management Systems, Software Engineering principles, web Designing, Java, Pyhton .</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content-glass">
+                        <span class="date">2021 - 2023</span>
+                        <h3>Secondary Education</h3>
+                        <p class="institution">Secondary Board of Education</p>
+                        <p>Completed secondary coursework with a major emphasis on Mathematics and Sciences, fostering analytical and problem-solving skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card-glass">
+                    <div class="project-info">
+                        <h3>Personal Portfolio Website</h3>
+                        <p class="project-tech">HTML • CSS • JavaScript</p>
+                        <p>A fully responsive professional portfolio utilizing dynamic custom properties, glassmorphism UI principles, and light/dark theme toggle capabilities.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card-glass">
+                    <div class="project-info">
+                        <h3>Student Database Management System</h3>
+                        <p class="project-tech">C Language • File Handling</p>
+                        <p>A console-based software tool engineered to organize, register, search, and update basic information of academic students dynamically.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card-glass">
+                    <div class="project-info">
+                        <h3>Interactive Quiz Application</h3>
+                        <p class="project-tech">JavaScript • Web API</p>
+                        <p>A web-based game app showcasing dynamic DOM rendering, complex logic control flow, timer intervals, and state persistence across page loads.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info-glass">
+                    <h3>Let's Collaborate</h3>
+                    <p>I'm open to discussing web projects, internship opportunities, or even casual conversations about computer science theory and web tech.</p>
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>dharmisthaghosh23@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-glass">
+                    <form id="contact-form">
+                        <div class="input-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 Dharmistha Ghosh. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
