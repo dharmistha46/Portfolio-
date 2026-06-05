@@ -1053,23 +1053,74 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+
+    .hero-section {
+        padding-top: 7rem;
     }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .welcome-tag {
+        margin: 0 auto 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+
+    .hero-content h2 {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        height: auto; /* Important */
+        min-height: 60px;
+        white-space: normal; /* Allow wrapping */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        padding: 0 10px;
+    }
+
+    .profile-avatar {
+        width: 180px;
+        height: 180px;
+    }
+
+    .status-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
     .hero-btns {
         flex-direction: column;
         width: 100%;
+        gap: 1rem;
     }
+
     .hero-btns .btn {
         width: 100%;
         justify-content: center;
     }
-    .about-card-glass, .contact-info-glass, .contact-form-glass {
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .about-card-glass,
+    .contact-info-glass,
+    .contact-form-glass {
         padding: 1.5rem;
     }
+
     .footer-container {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
         text-align: center;
     }
 }
